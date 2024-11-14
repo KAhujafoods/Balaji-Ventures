@@ -1,0 +1,166 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: white; /* Set the background to white */
+    color: #2e8b57; /* A deep green color for text */
+}
+
+.container {
+    width: 80%;
+    
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: #2e8b57; /* Green color for headings */
+}
+
+/* Logo Styling */
+.logo {
+    position: absolute;
+    top: 20px; /* Adjust vertical positioning */
+    left: 20px; /* Adjust horizontal positioning */
+    width: 100px; /* Adjust logo size */
+    height: auto;
+}
+
+/* Header Section */
+header {
+    background-color: #2e8b57; /* Dark green background for the header */
+    color: white; /* White text in the header */
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white; /* White links in the navigation */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #fecc3d; /* Yellow color when hovering over links */
+}
+
+/* Hero Section */
+.hero {
+    background-color: rgba(0, 255, 110, 0.8); /* Slightly transparent green background */
+    color: rgb(0, 0, 0);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+/* About Section */
+.about {
+    padding: 50px 0;
+    background-color: #f4f4f4; /* Light grey background */
+    text-align: center;
+}
+
+.about p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Products Section */
+.products {
+    padding: 50px 0;
+    background-color: white; /* White background for products section */
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 200px;
+    margin: 15px;
+    text-align: center;
+    padding: 20px;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    color: #2e8b57; /* Green color for product names */
+}
+
+.product-card p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #2e8b57; /* Dark green background for the contact section */
+    color: white;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #2e8b57; /* Green border for input fields */
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background-color: #fecc3d; /* Yellow button background */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #ffba00; /* Darker yellow on hover */
+}
+
+/* Footer Section */
+footer {
+    background-color: #2e8b57; /* Green background for the footer */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}

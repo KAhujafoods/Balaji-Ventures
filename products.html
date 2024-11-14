@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Balaji Ventures Products - Premium Spices">
+    <title>Our Products - Balaji Ventures</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        header .logo {
+            max-height: 50px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        #products {
+            padding: 40px 20px;
+            background-color: #fff;
+            margin-top: 20px;
+        }
+
+        #products h2 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 300px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            font-size: 24px;
+            padding: 15px;
+            text-align: center;
+            background-color: #f7f7f7;
+            margin: 0;
+        }
+
+        .product-card p {
+            padding: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .product-card button:hover {
+            background-color: #555;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            overflow: auto;
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .modal-body p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <!-- Logo positioned at the top-left corner -->
+            <img src="Balaji Ventures NBG.png" alt="Balaji Ventures Logo" class="logo">
+            <h1>Balaji Ventures</h1>
+            <nav>
+                <ul>
+                    <li><a href="Balaji 123.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">Our Products</a></li>
+                    <li><a href="Contacts.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Our Premium Spices</h2>
+            <div class="product-list">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="Cardamom.jpg" alt="Cardamom">
+                    <h3>Cardamom</h3>
+                    <p>High-quality Cardamom for rich aroma and flavor in your dishes.</p>
+                    <button class="know-more-btn" data-modal="modal-cardamom">Know More</button>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="Turmeric.jpg" alt="Turmeric">
+                    <h3>Turmeric</h3>
+                    <p>Pure and organic turmeric for a natural touch to your cooking.</p>
+                    <button class="know-more-btn" data-modal="modal-turmeric">Know More</button>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="Ginger.jpg" alt="Ginger">
+                    <h3>Ginger</h3>
+                    <p>Fresh ginger for a zesty, spicy kick to your meals.</p>
+                    <button class="know-more-btn" data-modal="modal-ginger">Know More</button>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img src="Cinnamon.jpg" alt="Cinnamon">
+                    <h3>Cinnamon</h3>
+                    <p>Premium cinnamon sticks with a delightful fragrance.</p>
+                    <button class="know-more-btn" data-modal="modal-cinnamon">Know More</button>
+                </div>
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <img src="Cumin.jpg" alt="Cumin">
+                    <h3>Cumin</h3>
+                    <p>Authentic cumin seeds to enhance the taste of your dishes.</p>
+                    <button class="know-more-btn" data-modal="modal-cumin">Know More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals for each product -->
+    <!-- Cardamom Modal -->
+    <div id="modal-cardamom" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Cardamom</h2>
+            </div>
+            <div class="modal-body">
+                <p>Cardamom is a highly aromatic spice known for its warm, spicy, and slightly sweet flavor. It is used in a variety of dishes, including desserts, beverages, and savory foods.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Turmeric Modal -->
+    <div id="modal-turmeric" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Turmeric</h2>
+            </div>
+            <div class="modal-body">
+                <p>Turmeric is a vibrant yellow spice known for its earthy flavor and health benefits. It is commonly used in curries, rice dishes, and smoothies.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ginger Modal -->
+    <div id="modal-ginger" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Ginger</h2>
+            </div>
+            <div class="modal-body">
+                <p>Ginger adds a zesty and spicy kick to any dish. It is used in both savory and sweet recipes, as well as in teas and beverages.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cinnamon Modal -->
+    <div id="modal-cinnamon" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Cinnamon</h2>
+            </div>
+            <div class="modal-body">
+                <p>Cinnamon is a sweet and fragrant spice that is used in both sweet and savory dishes. It is especially popular in baked goods, hot drinks, and curry blends.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cumin Modal -->
+    <div id="modal-cumin" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Cumin</h2>
+            </div>
+            <div class="modal-body">
+                <p>Cumin is a warm and earthy spice that is commonly used in Indian, Middle Eastern, and Mexican cuisines to add depth and flavor.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Balaji Ventures. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Open the modal when clicking the "Know More" button
+        const knowMoreBtns = document.querySelectorAll('.know-more-btn');
+        const modals = document.querySelectorAll('.modal');
+        const closeBtns = document.querySelectorAll('.close');
+
+        knowMoreBtns.forEach(button => {
+            button.addEventListener('click', () => {
+                const modalId = button.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+                modal.style.display = 'block';
+            });
+        });
+
+        // Close the modal when the "close" button is clicked
+        closeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const modal = btn.closest('.modal');
+                modal.style.display = 'none';
+            });
+        });
+
+        // Close the modal when clicking outside the modal content
+        window.addEventListener('click', (event) => {
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
